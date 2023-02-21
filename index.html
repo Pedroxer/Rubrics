@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+    <body class = "">
+    
+   
+    <div class="container">
+        <ul class="nav d-flex justify-content-evenly p-3 bg-primary ">
+            <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#" id = "xui" onclick="Add_row()">New Row</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+            </li>
+        </ul>
+        <div class = "m-5"></div>
+        <form>
+            <table class = "d-flex justify-content-evenly bg-primary text-white" >
+                <tr>
+                    <td class = "text-center">Rubrics</td>
+                    <td class = "text-center">Whole new level</td>
+                    <td class = "text-center">Regular</td>
+                    <td class = "text-center">Low level</td>
+                </tr>
+                <tr class = " border border-primary">
+                    <th class = "p-2"><input type = "text" placeholder = "Your first rubric" > </th>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <th class = "p-2"><input type = "text" placeholder = "Your second rubric"> </th>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    
+                    
+                </tr>
+                <tr id = "last_row">
+                    <th class = "p-2"><input type = "text" placeholder = "Your third rubric"> </th>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    
+                    
+                </tr>
+            </table>
+        
+            <input type ="submit" class="d-flex justify-content-center">
+        </form>
+   </div>
+   
+    
+    </body>
+    <script>
+        function Add_row(){
+            var d = document.getElementById("last_row");
+            var new_row = document.createElement('tr');
+            
+            d.insertAdjacentHTML("afterend", `<tr id = "last_row">
+                    <th class = "p-2"><input type = "text" placeholder = "Your \'\' rubric"> </th>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    <td class = "p-2"><input type = "text" class ="m-2 p-2"><input type = "checkbox"></td>
+                    
+                    
+                </tr>` );
+            
+            
+        }
+    </script>
+</html>
